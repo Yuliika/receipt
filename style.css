@@ -1,0 +1,269 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5DEB3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+* {
+    font-family: Arial, sans-serif !important; 
+    text-transform: none; 
+}
+h1, h2, h3, .recipe-title, .nav-button, .dropbtn, .recipe-btn {
+    font-family: Arial, sans-serif !important;
+    letter-spacing: normal
+}
+/*Шапка*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #8B5A2B;
+    border-bottom: 3px solid #5d3a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #F5DEB3;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-button, .dropbtn {
+    background-color: transparent;
+    border: 1px solid #F5DEB3;
+    color: #F5DEB3;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    min-width: 120px; 
+    text-align: center; 
+}
+
+.nav-button:hover, .dropbtn:hover {
+    background-color: #F5DEB3;
+    color: #8B5A2B;
+}
+
+/* Доповнення */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fdf5e6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content a {
+    color: #8B5A2B;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    background-color: #8B5A2B;
+    color: #F5DEB3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Сітки та картки */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 картки в ряд */
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recipe-card {
+    position: relative;
+    height: 400px;
+    border: 2px solid #8c7355;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #8c7355; /* Фон картки, якщо картинка не завантажиться */
+}
+
+.recipe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensuring image covers the area, not distorts */
+}
+.recipe-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.recipe-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    opacity: 0.7; 
+    z-index: 1; 
+}
+
+.recipe-title {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    color: #fff; /* Білий колір тексту */
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif; /* Простий шрифт */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* Тінь для кращої читабельності */
+    margin: 0;
+    z-index: 2; /* Place text above overlay */
+}
+
+.recipe-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 10%;
+    width: 80%;
+    background-color: #d2b48c;
+    color: #8c7355;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+    z-index: 2; /* Place button above overlay */
+}
+
+.recipe-btn:hover {
+    background-color: #8B5A2B;
+    color: #F5DEB3;
+    transform: scale(1.03);
+}
+
+.recipe-btn {
+    transition: 0.3s; 
+}
+
+/* футер */
+section {
+    scroll-margin-top: 80px;
+}
+
+footer {
+    background-color: #8B5A2B;
+    color: #F5DEB3;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 3px solid #5d3a1a;
+}
+
+/* мобільна версія */
+@media (max-width: 768px) {
+    .header { flex-direction: column; text-align: center; padding: 15px; }
+    .nav { flex-direction: column; width: 100%; margin-top: 15px; }
+    .recipe-grid { grid-template-columns: 1fr; } 
+}
+
+/* Приховане вікно */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Затемнення фону */
+  }
+  
+  /* Саме віконце */
+  .modal-content {
+    background-color: #F5DEB3; /* Твій фірмовий колір */
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid #8B5A2B;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  /* Кнопка закриття */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #8B5A2B;
+  }
+  section h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #8B5A2B;
+}
+
+/* Ефект для кнопок на головному банері */
+.hero-section a:hover {
+    background-color: #8B5A2B !important;
+    color: #F5DEB3 !important;
+    transform: scale(1.1);
+}

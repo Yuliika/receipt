@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Обіди - Кулінарна книга</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">КНИГА РЕЦЕПТІВ</div>
+        <nav class="nav">
+            <a href="index.html" class="nav-button">Головна</a>
+            <div class="dropdown">
+                <button class="dropbtn">Категорії</button>
+                <div class="dropdown-content">
+                    <a href="breakfast.html">Сніданки</a>
+                    <a href="lunch.html">Обіди</a>
+                    <a href="desserts.html">Десерти</a>
+                    <a href="cold.html">Холодне</a>
+                    <a href="drinks.html">Напої</a>
+                </div>
+            </div>
+            <a href="#comments" class="nav-button">Коментарі</a>
+        </nav>
+        <div class="dropdown">
+            <button class="dropbtn">Профіль</button>
+            <div class="dropdown-content">
+                <a href="#">Увійти</a>
+                <a href="#">Зареєструватися</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section style="background-color: #fff9f0; padding: 40px 0; text-align: center; border-bottom: 2px solid #8B5A2B;">
+            <span style="font-size: 40px; color: #8B5A2B;">🍝</span>
+            <h1 style="color: #8B5A2B; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0; font-size: 32px;">
+                Обіди, що дарують сили 
+            </h1>
+            <p style="color: #5d3a1a; font-style: italic; margin: 0; font-size: 16px;">
+                Смачні домашні страви, які хочеться повторити
+            </p>
+        </section>
+
+        <section class="recipe-grid">
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/mushroom-soup.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ГРИБНИЙ КРЕМ-СУП</h3>
+                <button class="recipe-btn" onclick="openModal('mushroomModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/carbonara.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ПАСТА КАРБОНАРА</h3>
+                <button class="recipe-btn" onclick="openModal('carbonaraModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/honey-chicken.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">МЕДОВА КУРКА</h3>
+                <button class="recipe-btn" onclick="openModal('chickenModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/greek-salad.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ГРЕЦЬКИЙ САЛАТ</h3>
+                <button class="recipe-btn" onclick="openModal('greekModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/salmon.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ЛОСОСЬ З БРОКОЛІ</h3>
+                <button class="recipe-btn" onclick="openModal('salmonModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/lasagna.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ЛАЗАНЬЯ</h3>
+                <button class="recipe-btn" onclick="openModal('lasagnaModal')">Рецепт</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакти: info@recipe-book.com | Тел: +380 99 123 11 00</p>
+    </footer>
+
+    <div id="mushroomModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('mushroomModal')">&times;</span>
+            <h2>Грибний Крем-суп</h2>
+            <p><strong>Інгредієнти:</strong> 500г печериць, 200мл вершків, 2 картоплини, цибуля, вершкове масло.</p>
+            <p><strong>Приготування:</strong> Обсмажте гриби з цибулею, зваріть картоплю. Збийте все блендером, додайте вершки та прогрійте.</p>
+        </div>
+    </div>
+    
+    <div id="carbonaraModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('carbonaraModal')">&times;</span>
+            <h2>Паста Карбонара</h2>
+            <p><strong>Інгредієнти:</strong> Спагеті, бекон (панчета), 2 жовтки, сир Пармезан, чорний перець.</p>
+            <p><strong>Приготування:</strong> Відваріть пасту. Обсмажте бекон. Змішайте жовтки з сиром. З'єднайте все разом, додавши трохи води з пасти.</p>
+        </div>
+    </div>
+    
+    <div id="chickenModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('chickenModal')">&times;</span>
+            <h2>Медова курка</h2>
+            <p><strong>Інгредієнти:</strong> Куряче філе, 2 ст.л. меду, 1 ст.л. гірчиці, соєвий соус, часник.</p>
+            <p><strong>Приготування:</strong> Замаринуйте філе в соусі на 20 хв. Обсмажте на сковорідці або запечіть у духовці до готовності.</p>
+        </div>
+    </div>
+    
+    <div id="greekModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('greekModal')">&times;</span>
+            <h2>Грецький салат</h2>
+            <p><strong>Інгредієнти:</strong> Огірки, томати, болгарський перець, сир Фета, оливки, оливкова олія.</p>
+            <p><strong>Приготування:</strong> Наріжте овочі великими кубиками, додайте оливки та цілі шматочки Фети. Полийте олією та посипте орегано.</p>
+        </div>
+    </div>
+    
+    <div id="salmonModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('salmonModal')">&times;</span>
+            <h2>Лосось з броколі</h2>
+            <p><strong>Інгредієнти:</strong> Стейк лосося, броколі, лимон, спеції для риби, оливкова олія.</p>
+            <p><strong>Приготування:</strong> Посипте рибу спеціями, збризніть лимоном. Готуйте на парі разом із броколі 15-20 хвилин.</p>
+        </div>
+    </div>
+    
+    <div id="lasagnaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('lasagnaModal')">&times;</span>
+            <h2>Лазанья</h2>
+            <p><strong>Інгредієнти:</strong> Листи лазаньї, фарш, соус Болоньєзе, соус Бешамель, сир Моцарела.</p>
+            <p><strong>Приготування:</strong> Викладайте шарами: листи, фарш, соус. Зверху щедро посипте сиром і запікайте 40 хвилин при 180°C.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

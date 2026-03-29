@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Кулінарна книга</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">КНИГА РЕЦЕПТІВ</div>
+    
+        <nav class="nav">
+            <a href="#recipes" class="nav-button">Мої рецепти</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Категорії</button>
+                <div class="dropdown-content">
+                    <a href="breakfast.html">Сніданки</a>
+                    <a href="lunch.html">Обіди</a>
+                    <a href="desserts.html">Десерти</a>
+                    <a href="cold.html">Холодне</a>
+                    <a href="drinks.html">Напої</a>
+                </div>
+            </div>
+            
+            <a href="#comments" class="nav-button">Коментарі</a>
+        </nav>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Профіль</button>
+            <div class="dropdown-content">
+                <a href="#">Увійти</a>
+                <a href="#">Зареєструватися</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/main-bg.jpg') no-repeat center/cover; height: 450px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;">
+            <h1 style="font-size: 50px; text-transform: uppercase; letter-spacing: 3px; margin: 0;">Смак Твоїх Перемог</h1>
+            <p style="font-size: 20px; margin: 15px 0 30px;">Найкращі домашні рецепти, перевірені часом</p>
+            <a href="#recipes" style="background-color: #F5DEB3; color: #8B5A2B; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 30px; transition: 0.3s;">До рецептів ↓</a>
+        </section>
+    
+        <section style="padding: 60px 20px; text-align: center; background-color: #fff;">
+            <h2 style="color: #8B5A2B; font-size: 32px;">Ласкаво просимо!</h2>
+            <p style="max-width: 700px; margin: 0 auto; color: #5d3a1a; line-height: 1.6;">
+                Ця книга рецептів створена для тих, хто любить готувати з душею. 
+                Тут ви знайдете не просто інструкції, а натхнення для щоденних обідів та святкових вечерь.
+            </p>
+        </section>
+    
+        <section id="recipes" style="padding: 20px 0 60px;">
+            <h2 style="text-align: center; color: #8B5A2B; margin-bottom: 40px;">Популярне зараз</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <img src="img/sirniky.png" alt="Сирники" class="recipe-image">
+                    <h3 class="recipe-title">СИРНИКИ</h3>
+                    <button class="recipe-btn" onclick="openModal('sirnykyModal')">Дивитися рецепт</button>
+                </div>
+                
+                <div class="recipe-card">
+                    <img src="img/crab.png" alt="Крабовий" class="recipe-image">
+                    <h3 class="recipe-title">КРАБОВИЙ САЛАТ</h3>
+                    <button class="recipe-btn" onclick="openModal('crabModal')">Дивитися рецепт</button>
+                </div>
+    
+                <div class="recipe-card">
+                    <img src="img/borch.png" alt="Борщ" class="recipe-image">
+                    <h3 class="recipe-title">БОРЩ</h3>
+                    <button class="recipe-btn" onclick="openModal('borchModal')">Дивитися рецепт</button>
+                </div>
+            </div>
+        </section>
+    
+        <section style="padding: 50px 20px; text-align: center; background: transparent;">
+            <div style="max-width: 900px; margin: 0 auto; color: #5d3a1a;">
+                <h3 style="font-style: italic; font-size: 28px; font-weight: 300; line-height: 1.6; margin: 0;">
+                    &ldquo; Смачно, як удома. Просто, як усе геніальне. &rdquo;
+                </h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакти: info@recipe-book.com | Тел: +380 99 123 11 00</p>
+    </footer>
+
+    <div id="sirnykyModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('sirnykyModal')">&times;</span>
+          <h2>Сирники</h2>
+          <p><strong>Інгредієнти:</strong> 500г сиру, 1 яйце, 3 ст.л. борошна, 2 ст.л. цукру.</p>
+          <p><strong>Приготування:</strong> Змішати всі інгредієнти, сформувати сирники та обсмажити на сковорідці до золотистої скоринки.</p>
+        </div>
+    </div>
+
+    <div id="crabModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('crabModal')">&times;</span>
+            <h2>Крабовий салат</h2>
+            <p><strong>Інгредієнти:</strong> Крабові палички, кукурудза, яйця, рис, огірок, майонез.</p>
+            <p><strong>Приготування:</strong> Наріжте інгредієнти кубиками, змішайте та заправте майонезом.</p>
+        </div>
+    </div>
+    
+    <div id="borchModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('borchModal')">&times;</span>
+            <h2>Український Борщ</h2>
+            <p><strong>Інгредієнти:</strong> М'ясо, буряк, капуста, картопля, морква, цибуля, томатна паста.</p>
+            <p><strong>Приготування:</strong> Зваріть бульйон, додайте овочі. Буряк тушкуйте окремо з томатом для кольору.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

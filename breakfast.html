@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Сніданки - Кулінарна книга</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">КНИГА РЕЦЕПТІВ</div>
+        <nav class="nav">
+            <a href="index.html" class="nav-button">Головна</a>
+            <div class="dropdown">
+                <button class="dropbtn">Категорії</button>
+                <div class="dropdown-content">
+                    <a href="breakfast.html">Сніданки</a>
+                    <a href="lunch.html">Обіди</a>
+                    <a href="desserts.html">Десерти</a>
+                    <a href="cold.html">Холодне</a>
+                    <a href="drinks.html">Напої</a>
+                </div>
+            </div>
+            <a href="#comments" class="nav-button">Коментарі</a>
+        </nav>
+        <div class="dropdown">
+            <button class="dropbtn">Профіль</button>
+            <div class="dropdown-content">
+                <a href="#">Увійти</a>
+                <a href="#">Зареєструватися</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section style="background-color: #fff9f0; padding: 40px 0; text-align: center; border-bottom: 2px solid #8B5A2B;">
+            <span style="font-size: 40px; color: #8B5A2B;">🥐</span>
+            <h1 style="color: #8B5A2B; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0; font-size: 32px;">
+                Сніданки, що надихають
+            </h1>
+            <p style="color: #5d3a1a; font-style: italic; margin: 0; font-size: 16px;">
+                Почніть свій день зі смаком та енергією
+            </p>
+        </section>
+
+        <section class="recipe-grid">
+            <div class="recipe-card">
+                <div class="recipe-image-container">
+                    <img src="img/pancakes.jpg" alt="Панкейки" class="recipe-image">
+                </div>
+                <h3 class="recipe-title">ПАНКЕЙКИ</h3>
+                <button class="recipe-btn" onclick="openModal('pancakeModal')">Рецепт</button>
+            </div>
+            
+            <div class="recipe-card">
+                <div class="recipe-image-container">
+                    <img src="img/shakshuka.jpg" alt="Шакшука" class="recipe-image">
+                </div>
+                <h3 class="recipe-title">ШАKШУKA</h3>
+                <button class="recipe-btn" onclick="openModal('shakshukaModal')">Рецепт</button>
+            </div>
+            
+            <div class="recipe-card">
+                <div class="recipe-image-container">
+                    <img src="img/toasts.jpg" alt="Тости" class="recipe-image">
+                </div>
+                <h3 class="recipe-title">ТОСТИ</h3>
+                <button class="recipe-btn" onclick="openModal('toastModal')">Рецепт</button>
+            </div>
+            
+            <div class="recipe-card">
+                <div class="recipe-image-container">
+                    <img src="img/avocado.jpg" alt="Авокадо тост" class="recipe-image">
+                </div>
+                <h3 class="recipe-title">АВОКАДО-ТОСТ</h3>
+                <button class="recipe-btn" onclick="openModal('avocadoModal')">Рецепт</button>
+            </div>
+            
+            <div class="recipe-card">
+                <div class="recipe-image-container">
+                    <img src="img/granola.jpg" alt="Гранола" class="recipe-image">
+                </div>
+                <h3 class="recipe-title">ГРАНОЛА</h3>
+                <button class="recipe-btn" onclick="openModal('granolaModal')">Рецепт</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакти: info@recipe-book.com | Тел: +380 99 123 11 00</p>
+    </footer>
+
+    <div id="pancakeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('pancakeModal')">&times;</span>
+            <h2>Пишні Панкейки</h2>
+            <p><strong>Інгредієнти:</strong> 200мл молока, 1 яйце, 1.5 склянки борошна, 2 ст.л. цукру, 1 ч.л. розпушувача.</p>
+            <p><strong>Приготування:</strong> Змішайте сухі інгредієнти, додайте молоко та яйце. Смажте на сухій сковорідці до появи бульбашок, потім переверніть.</p>
+        </div>
+    </div>
+    
+    <div id="shakshukaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('shakshukaModal')">&times;</span>
+            <h2>Шакшука</h2>
+            <p><strong>Інгредієнти:</strong> 2 яйця, 2 помідори, половина болгарського перцю, цибуля, спеції (кумін, паприка), зелень.</p>
+            <p><strong>Приготування:</strong> Обсмажте цибулю та перець, додайте нарізані томати. Зробіть заглиблення, вбийте яйця та готуйте під кришкою до готовності білка.</p>
+        </div>
+    </div>
+    
+    <div id="toastModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('toastModal')">&times;</span>
+            <h2>Французькі тости</h2>
+            <p><strong>Інгредієнти:</strong> Батон або бріош, 1 яйце, 50мл молока, дрібка кориці, мед для подачі.</p>
+            <p><strong>Приготування:</strong> Збийте яйце з молоком та корицею. Вмочіть скибочки хліба в суміш і обсмажте на вершковому маслі до золотої скоринки.</p>
+        </div>
+    </div>
+    
+    <div id="avocadoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('avocadoModal')">&times;</span>
+            <h2>Авокадо-тост</h2>
+            <p><strong>Інгредієнти:</strong> Цільнозерновий хліб, 1 стигле авокадо, яйце пашот, сіль, лимонний сік.</p>
+            <p><strong>Приготування:</strong> Розімніть авокадо з лимонним соком, намажте на підсмажений хліб. Зверху викладіть тепле яйце пашот.</p>
+        </div>
+    </div>
+    
+    <div id="granolaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('granolaModal')">&times;</span>
+            <h2>Гранола з йогуртом</h2>
+            <p><strong>Інгредієнти:</strong> Гранола (запечена вівсянка), грецький йогурт, свіжі ягоди, горіхи.</p>
+            <p><strong>Приготування:</strong> Викладіть у склянку шарами йогурт, потім гранолу, зверху додайте свіжі ягоди та полийте медом.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
