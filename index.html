@@ -27,14 +27,14 @@
                 </div>
             </div>
             
-            <a href="#comments" class="nav-button">Коментарі</a>
+            <a href="index.html#comments" class="nav-button">Коментарі</a>
         </nav>
     
         <div class="dropdown">
             <button class="dropbtn">Профіль</button>
             <div class="dropdown-content">
-                <a href="#">Увійти</a>
-                <a href="#">Зареєструватися</a>
+                <a href="profile.html">Увійти</a> 
+                <a href="#registration">Зареєструватися</a>
             </div>
         </div>
     </header>
@@ -58,19 +58,19 @@
             <h2 style="text-align: center; color: #8B5A2B; margin-bottom: 40px;">Популярне зараз</h2>
             <div class="recipe-grid">
                 <div class="recipe-card">
-                    <img src="img/sirniky.png" alt="Сирники" class="recipe-image">
+                    <div class="recipe-image-container"><img src="img/sirniky.png" class="recipe-image"></div>
                     <h3 class="recipe-title">СИРНИКИ</h3>
                     <button class="recipe-btn" onclick="openModal('sirnykyModal')">Дивитися рецепт</button>
                 </div>
                 
                 <div class="recipe-card">
-                    <img src="img/crab.png" alt="Крабовий" class="recipe-image">
+                    <div class="recipe-image-container"><img src="img/crab.png" class="recipe-image"></div>
                     <h3 class="recipe-title">КРАБОВИЙ САЛАТ</h3>
                     <button class="recipe-btn" onclick="openModal('crabModal')">Дивитися рецепт</button>
                 </div>
     
                 <div class="recipe-card">
-                    <img src="img/borch.png" alt="Борщ" class="recipe-image">
+                    <div class="recipe-image-container"><img src="img/borch.png" class="recipe-image"></div>
                     <h3 class="recipe-title">БОРЩ</h3>
                     <button class="recipe-btn" onclick="openModal('borchModal')">Дивитися рецепт</button>
                 </div>
@@ -85,8 +85,41 @@
             </div>
         </section>
     </main>
-
-    <footer>
+    <div style="text-align: center; margin: 20px 0;">
+        <button id="toggleCommentsBtn" onclick="toggleComments()" class="comment-toggle-button">
+            Приховати коментарі
+        </button>
+    </div>
+    <section id="comments" style="padding: 60px 20px; background-color: #fff9f0; border-top: 2px solid #8B5A2B;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; color: #8B5A2B; margin-bottom: 30px; font-family: Arial, sans-serif;">ВАШІ ВІДГУКИ</h2>
+    
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 40px;">
+                <h3 style="color: #8B5A2B; margin-top: 0; font-size: 18px;">Залишити відгук:</h3>
+                <form id="commentForm">
+                    <input type="text" placeholder="Ваше ім'я" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #d2b48c; border-radius: 8px; box-sizing: border-box;">
+                    <textarea placeholder="Поділіться враженнями від рецепту..." rows="4" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #d2b48c; border-radius: 8px; box-sizing: border-box; resize: vertical;"></textarea>
+                    <button type="button" class="recipe-btn" style="position: static; width: 200px; cursor: pointer;">Відправити</button>
+                </form>
+            </div>
+    
+            <div id="commentsList">
+                <div style="border-bottom: 1px solid #d2b48c; padding: 20px 0;">
+                    <strong style="color: #8B5A2B; font-size: 16px;">Марина</strong>
+                    <p style="color: #5d3a1a; margin: 5px 0 0; font-style: italic;">"Спробувала приготувати сирники за вашим рецептом — вийшли дуже пухкі! Дякую!"</p>
+                </div>
+                <div style="border-bottom: 1px solid #d2b48c; padding: 20px 0;">
+                    <strong style="color: #8B5A2B; font-size: 16px;">Андрій</strong>
+                    <p style="color: #5d3a1a; margin: 5px 0 0; font-style: italic;">"Борщ — просто вогонь! Смак як у дитинстві."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="registration" style="padding: 40px 20px; text-align: center; background-color: #8B5A2B; color: #F5DEB3;">
+        <h3 style="margin-bottom: 10px;">Станьте частиною нашої спільноти!</h3>
+        <p>Зареєструйтеся, щоб зберігати власні рецепти та залишати відгуки.</p>
+        <button class="recipe-btn" style="position: static; background-color: #F5DEB3; color: #8B5A2B; width: 200px; margin-bottom: 20px;">Зареєструватися зараз</button>
+        <hr style="border: 0; border-top: 1px solid rgba(245, 222, 179, 0.3); margin: 20px 0;">
         <p>Контакти: info@recipe-book.com | Тел: +380 99 123 11 00</p>
     </footer>
 

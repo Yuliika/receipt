@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Сніданки - Кулінарна книга</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">КНИГА РЕЦЕПТІВ</div>
+        <nav class="nav">
+            <a href="index.html" class="nav-button">Головна</a>
+            <div class="dropdown">
+                <button class="dropbtn">Категорії</button>
+                <div class="dropdown-content">
+                    <a href="breakfast.html">Сніданки</a>
+                    <a href="lunch.html">Обіди</a>
+                    <a href="desserts.html">Десерти</a>
+                    <a href="cold.html">Холодне</a>
+                    <a href="drinks.html">Напої</a>
+                </div>
+            </div>
+            <a href="#comments" class="nav-button">Коментарі</a>
+        </nav>
+        <div class="dropdown">
+            <button class="dropbtn">Профіль</button>
+            <div class="dropdown-content">
+                <a href="profile.html">Увійти</a> 
+                <a href="#registration">Зареєструватися</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section style="background-color: #fff9f0; padding: 40px 0; text-align: center; border-bottom: 2px solid #8B5A2B;">
+            <span style="font-size: 40px; color: #8B5A2B;">🍰</span> 
+            <h1 style="color: #8B5A2B; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0; font-size: 32px;">
+                Солодкі моменти
+            </h1>
+            <p style="color: #5d3a1a; font-style: italic; margin: 0; font-size: 16px;">
+                Десерти, які роблять життя яскравішим
+            </p>
+        </section>
+
+        <section class="recipe-grid">
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/tiramisu.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ТІРАМІСУ</h3>
+                <button class="recipe-btn" onclick="openModal('tiramisuModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/cheesecake.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ЧИЗКЕЙК</h3>
+                <button class="recipe-btn" onclick="openModal('cheesecakeModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/fondant.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ФОНДАН</h3>
+                <button class="recipe-btn" onclick="openModal('fondantModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/sorbet.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">СОРБЕТ</h3>
+                <button class="recipe-btn" onclick="openModal('sorbetModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/macarons.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">МАКАРУНИ</h3>
+                <button class="recipe-btn" onclick="openModal('macaronsModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/strudel.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ШТРУДЕЛЬ</h3>
+                <button class="recipe-btn" onclick="openModal('strudelModal')">Рецепт</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакти: info@recipe-book.com | Тел: +380 99 123 11 00</p>
+    </footer>
+
+    <div id="tiramisuModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('tiramisuModal')">&times;</span>
+            <h2>Тірамісу</h2>
+            <p><strong>Інгредієнти:</strong> Савоярді, маскарпоне, кава, какао, яйця, цукор.</p>
+            <p><strong>Приготування:</strong> Збийте крем з маскарпоне. Вмочуйте печиво в каву, викладайте шарами з кремом. Посипте какао.</p>
+        </div>
+    </div>
+    
+    <div id="cheesecakeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('cheesecakeModal')">&times;</span>
+            <h2>Чизкейк Нью-Йорк</h2>
+            <p><strong>Інгредієнти:</strong> Пісочне печиво, вершковий сир (Філадельфія), вершки, цукор, яйця.</p>
+            <p><strong>Приготування:</strong> Зробіть основу з печива. Змішайте сир з іншими інгредієнтами, вилийте на основу та запікайте на водяній бані.</p>
+        </div>
+    </div>
+    
+    <div id="fondantModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('fondantModal')">&times;</span>
+            <h2>Шоколадний фондан</h2>
+            <p><strong>Інгредієнти:</strong> Чорний шоколад, вершкове масло, борошно, яйця, цукор.</p>
+            <p><strong>Приготування:</strong> Розтопіть шоколад з маслом. Змішайте з яйцями та борошном. Запікайте рівно 8-10 хвилин при 200°C.</p>
+        </div>
+    </div>
+
+    <div id="sorbetModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('sorbetModal')">&times;</span>
+            <h2>Ягідний сорбет</h2>
+            <p><strong>Інгредієнти:</strong> 500г заморожених ягід (малина або полуниця), 100г цукрової пудри, 1 ст.л. лимонного соку.</p>
+            <p><strong>Приготування:</strong> Збийте ягоди з пудрою та соком у блендері до однорідності. Поставте в морозилку на 2 години, помішуючи кожні 30 хвилин.</p>
+        </div>
+    </div>
+    
+    <div id="macaronsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('macaronsModal')">&times;</span>
+            <h2>Макаруни</h2>
+            <p><strong>Інгредієнти:</strong> Мигдалеве борошно, цукрова пудра, яєчні білки, барвник, ганаш для начинки.</p>
+            <p><strong>Приготування:</strong> Збийте білки з пудрою, змішайте з мигдалевим борошном. Висадіть на деко кружечки, дайте підсохнути 30 хв і випікайте 12-15 хв при 150°C. З'єднайте половинки кремом.</p>
+        </div>
+    </div>
+    
+    <div id="strudelModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('strudelModal')">&times;</span>
+            <h2>Яблучний штрудель</h2>
+            <p><strong>Інгредієнти:</strong> Листкове тісто, 3 яблука, 50г родзинок, кориця, цукор, вершкове масло.</p>
+            <p><strong>Приготування:</strong> Наріжте яблука, змішайте з корицею та цукром. Викладіть на тонко розкатане тісто, згорніть рулетом і запікайте 30-35 хвилин при 180°C.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

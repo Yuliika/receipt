@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Холодні закуски - Кулінарна книга</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">КНИГА РЕЦЕПТІВ</div>
+        <nav class="nav">
+            <a href="index.html" class="nav-button">Головна</a>
+            <div class="dropdown">
+                <button class="dropbtn">Категорії</button>
+                <div class="dropdown-content">
+                    <a href="breakfast.html">Сніданки</a>
+                    <a href="lunch.html">Обіди</a>
+                    <a href="desserts.html">Десерти</a>
+                    <a href="cold.html">Холодне</a>
+                    <a href="drinks.html">Напої</a>
+                </div>
+            </div>
+            <a href="#comments" class="nav-button">Коментарі</a>
+        </nav>
+        <div class="dropdown">
+            <button class="dropbtn">Профіль</button>
+            <div class="dropdown-content">
+                <a href="profile.html">Увійти</a> 
+                <a href="#registration">Зареєструватися</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section style="background-color: #fff9f0; padding: 40px 0; text-align: center; border-bottom: 2px solid #8B5A2B;">
+            <span style="font-size: 40px; color: #8B5A2B;">🥗</span> 
+            <h1 style="color: #8B5A2B; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0; font-size: 32px;">
+                Холодні закуски
+            </h1>
+            <p style="color: #5d3a1a; font-style: italic; margin: 0; font-size: 16px;">
+                Свіжість та легкість у кожній страві
+            </p>
+        </section>
+
+        <section class="recipe-grid">
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/caprese.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">КАПРЕЗЕ</h3>
+                <button class="recipe-btn" onclick="openModal('capreseModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/bruschetta.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">БРУСКЕТИ</h3>
+                <button class="recipe-btn" onclick="openModal('bruschettaModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/hummus.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ХУМУС</h3>
+                <button class="recipe-btn" onclick="openModal('hummusModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/tartare.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ТАРТАР</h3>
+                <button class="recipe-btn" onclick="openModal('tartareModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/ham-rolls.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">РУЛЕТИКИ</h3>
+                <button class="recipe-btn" onclick="openModal('rollsModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/caesar.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ЦЕЗАР</h3>
+                <button class="recipe-btn" onclick="openModal('caesarModal')">Рецепт</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакти: info@recipe-book.com | Тел: +380 99 123 11 00</p>
+    </footer>
+
+    <div id="capreseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('capreseModal')">&times;</span>
+            <h2>Салат Капрезе</h2>
+            <p><strong>Інгредієнти:</strong> Томати, сир Моцарела, свіжий базилік, оливкова олія, бальзамічний оцет.</p>
+            <p><strong>Приготування:</strong> Наріжте томати та моцарелу кружечками. Викладіть по черзі, додайте листя базиліку. Полийте олією та соусом.</p>
+        </div>
+    </div>
+    
+    <div id="bruschettaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('bruschettaModal')">&times;</span>
+            <h2>Брускети з лососем</h2>
+            <p><strong>Інгредієнти:</strong> Багет, слабосолений лосось, вершковий сир, кріп, лимонний сік.</p>
+            <p><strong>Приготування:</strong> Підсушіть скибочки багета. Намажте сиром, викладіть шматочки риби. Посипте кропом та збризніть лимоном.</p>
+        </div>
+    </div>
+    
+    <div id="hummusModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('hummusModal')">&times;</span>
+            <h2>Домашній хумус</h2>
+            <p><strong>Інгредієнти:</strong> Консервований нут, тахіні (кунжутна паста), оливкова олія, часник, сік лимона.</p>
+            <p><strong>Приготування:</strong> Збийте в блендері нут із тахіні, часником та лимоном до однорідності. При подачі полийте олією та посипте паприкою.</p>
+        </div>
+    </div>
+
+    <div id="tartareModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('tartareModal')">&times;</span>
+            <h2>Тартар із яловичини</h2>
+            <p><strong>Інгредієнти:</strong> Свіжа яловича вирізка, каперси, корнішони, червона цибуля, яєчний жовток.</p>
+            <p><strong>Приготування:</strong> Дуже дрібно наріжте м'ясо та овочі. Змішайте, додайте спеції. Зверху викладіть жовток.</p>
+        </div>
+    </div>
+    
+    <div id="rollsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('rollsModal')">&times;</span>
+            <h2>Рулетики з шинки</h2>
+            <p><strong>Інгредієнти:</strong> Шинка, плавлений сир, часник, майонез, зелень.</p>
+            <p><strong>Приготування:</strong> Змішайте натертий сир із часником та майонезом. Намажте на шинку, загорніть рулетиком.</p>
+        </div>
+    </div>
+    
+    <div id="caesarModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('caesarModal')">&times;</span>
+            <h2>Салат Цезар</h2>
+            <p><strong>Інгредієнти:</strong> Салат, куряче філе, сухарики, Пармезан, соус Цезар.</p>
+            <p><strong>Приготування:</strong> Викладіть салат, обсмажену курку та сухарики. Полийте соусом та посипте сиром.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -193,6 +193,23 @@ h1, h2, h3, .recipe-title, .nav-button, .dropbtn, .recipe-btn {
 section {
     scroll-margin-top: 80px;
 }
+.comment-toggle-button {
+    background-color: #d2b48c;
+    color: #5d3a1a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.comment-toggle-button:hover {
+    background-color: #cda079; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
 
 footer {
     background-color: #8B5A2B;

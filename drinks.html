@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Напої - Кулінарна книга</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">КНИГА РЕЦЕПТІВ</div>
+        <nav class="nav">
+            <a href="index.html" class="nav-button">Головна</a>
+            <div class="dropdown">
+                <button class="dropbtn">Категорії</button>
+                <div class="dropdown-content">
+                    <a href="breakfast.html">Сніданки</a>
+                    <a href="lunch.html">Обіди</a>
+                    <a href="desserts.html">Десерти</a>
+                    <a href="cold.html">Холодне</a>
+                    <a href="drinks.html">Напої</a>
+                </div>
+            </div>
+            <a href="#comments" class="nav-button">Коментарі</a>
+        </nav>
+        <div class="dropdown">
+            <button class="dropbtn">Профіль</button>
+            <div class="dropdown-content">
+                <a href="profile.html">Увійти</a> 
+                <a href="#registration">Зареєструватися</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section style="background-color: #fff9f0; padding: 40px 0; text-align: center; border-bottom: 2px solid #8B5A2B;">
+            <span style="font-size: 40px; color: #8B5A2B;">🍹</span> 
+            <h1 style="color: #8B5A2B; text-transform: uppercase; letter-spacing: 2px; margin: 10px 0; font-size: 32px;">
+                Освіжаючі напої
+            </h1>
+            <p style="color: #5d3a1a; font-style: italic; margin: 0; font-size: 16px;">
+                Смак та бадьорість у кожній склянці
+            </p>
+        </section>
+
+        <section class="recipe-grid">
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/lemonade.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ЛИМОНАД</h3>
+                <button class="recipe-btn" onclick="openModal('lemonadeModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/glace.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">КАВА ГЛЯСЕ</h3>
+                <button class="recipe-btn" onclick="openModal('glaceModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/smoothie.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">СМУЗІ</h3>
+                <button class="recipe-btn" onclick="openModal('smoothieModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/chocolate.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">ШОКОЛАД</h3>
+                <button class="recipe-btn" onclick="openModal('chocolateModal')">Рецепт</button>
+            </div>
+            <div class="recipe-card">
+                <div class="recipe-image-container"><img src="img/mohito.jpg" class="recipe-image"></div>
+                <h3 class="recipe-title">МОХІТО</h3>
+                <button class="recipe-btn" onclick="openModal('mohitoModal')">Рецепт</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакти: info@recipe-book.com | Тел: +380 99 123 11 00</p>
+    </footer>
+
+    <div id="lemonadeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('lemonadeModal')">&times;</span>
+            <h2>Домашній Лимонад</h2>
+            <p><strong>Інгредієнти:</strong> 3 лимони, 1 літр газованої води, 3 ст.л. меду або цукру, м'ята, лід.</p>
+            <p><strong>Приготування:</strong> Вичавіть сік з лимонів, змішайте з цукром та невеликою кількістю теплої води до розчинення. Додайте холодну газовану воду, м'яту та лід.</p>
+        </div>
+    </div>
+    
+    <div id="glaceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('glaceModal')">&times;</span>
+            <h2>Кава Глясе</h2>
+            <p><strong>Інгредієнти:</strong> 150мл міцної кави, 1 кулька ванільного морозива, тертий шоколад.</p>
+            <p><strong>Приготування:</strong> Зваріть каву та дайте їй охолонути. Перелийте в прозору склянку, зверху викладіть кульку морозива та посипте шоколадом.</p>
+        </div>
+    </div>
+    
+    <div id="smoothieModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('smoothieModal')">&times;</span>
+            <h2>Полуничне Смузі</h2>
+            <p><strong>Інгредієнти:</strong> 200г полуниці, 1 банан, 150мл натурального йогурту або молока.</p>
+            <p><strong>Приготування:</strong> Помістіть усі інгредієнти в блендер та збийте до однорідної кремової консистенції. Подавайте відразу.</p>
+        </div>
+    </div>
+
+    <div id="chocolateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('chocolateModal')">&times;</span>
+            <h2>Гарячий Шоколад</h2>
+            <p><strong>Інгредієнти:</strong> 200мл молока, 50г чорного шоколаду, дрібка кориці, маршмелоу.</p>
+            <p><strong>Приготування:</strong> Нагрійте молоко (не доводячи до кипіння), додайте поламаний шоколад. Помішуйте до розчинення. Прикрасьте маршмелоу.</p>
+        </div>
+    </div>
+    
+    <div id="mohitoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('mohitoModal')">&times;</span>
+            <h2>Безалкогольний Мохіто</h2>
+            <p><strong>Інгредієнти:</strong> Половина лайма, гілочка м'яти, 1 ст.л. тростинного цукру, спрайт або газована вода, лід.</p>
+            <p><strong>Приготування:</strong> Розітріть м'яту з цукром та шматочками лайма на дні склянки. Доверху наповніть льодом і залийте спрайтом.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
